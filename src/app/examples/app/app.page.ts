@@ -31,7 +31,7 @@ export class AppPage implements OnInit {
   ngOnInit() {
   }
 
-  appChangeTest() {
+  testAppChange() {
     window.open('https://capacitorjs.com/docs/apis', '_blank');
   }
 

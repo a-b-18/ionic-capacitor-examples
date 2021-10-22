@@ -15,7 +15,7 @@ export class ActionSheetPage implements OnInit {
   ngOnInit() {
   }
 
-  async actionSheetTest() {
+  async testActionSheet() {
     const result = await ActionSheet.showActions({
       title: 'Photo Options',
       message: 'Select an option to perform',
