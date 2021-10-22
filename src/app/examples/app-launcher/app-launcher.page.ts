@@ -19,7 +19,7 @@ export class AppLauncherPage implements OnInit {
   ngOnInit() {
   }
 
-  async openPortfolioPage() {
+  async testAppLauncher() {
     await AppLauncher.openUrl({ url: 'io.ionic.starter://examples/app-launcher' });
   };
 
