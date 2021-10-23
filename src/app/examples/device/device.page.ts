@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Device } from '@capacitor/device';
 
 @Component({
   selector: 'app-device',
@@ -11,5 +12,17 @@ export class DevicePage implements OnInit {
 
   ngOnInit() {
   }
+
+  async testDeviceInfo() {
+    const info = await Device.getInfo();
+
+    console.log(info);
+  };
+
+  async testBatteryInfo() {
+    const info = await Device.getBatteryInfo();
+
+    console.log(info);
+  };
 
 }
