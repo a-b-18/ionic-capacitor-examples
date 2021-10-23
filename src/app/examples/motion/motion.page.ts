@@ -8,10 +8,9 @@ import { ElementFinder } from 'protractor';
   styleUrls: ['./motion.page.scss'],
 })
 export class MotionPage implements OnInit {
-  xAcc: number;
-  yAcc: number;
-  zAcc: number;
-  motionEvent: AccelListenerEvent;
+  xAcc: string;
+  yAcc: string;
+  zAcc: string;
 
   constructor() { }
 
@@ -21,10 +20,12 @@ export class MotionPage implements OnInit {
   async testMotion(){
       Motion.addListener('accel', event => {
         console.log('Device motion event:', event);
-        this.motionEvent = event;
+        if (event.acceleration.x > 10) {this.xAcc = 'left';};
+        if (event.acceleration.x < -10) {this.xAcc = 'right';};
+        if (event.acceleration.y > 10) {this.yAcc = 'down';};
+        if (event.acceleration.y < -10) {this.yAcc = 'up';};
+        if (event.acceleration.z > 10) {this.zAcc = 'backward';};
+        if (event.acceleration.z < -10) {this.zAcc = 'forward';};
       });
-      this.xAcc = this.motionEvent.acceleration.x;
-      this.yAcc = this.motionEvent.acceleration.y;
-      this.zAcc = this.motionEvent.acceleration.z;
     };
   }
