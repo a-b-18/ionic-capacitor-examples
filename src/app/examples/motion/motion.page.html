@@ -5,5 +5,23 @@
 </ion-header>
 
 <ion-content>
-  <!-- <ion-button (click)="testMotion()">Test Motion</ion-button> -->
+  <ion-button (click)="testMotion()">Test Motion</ion-button>
+  <ion-grid>
+    <ion-row>
+      <ion-col>Direction</ion-col>
+      <ion-col>Magnitude</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>X</ion-col>
+      <ion-col>{{this.xAcc}}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>Y</ion-col>
+      <ion-col>{{this.yAcc}}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>Z</ion-col>
+      <ion-col>{{this.zAcc}}</ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

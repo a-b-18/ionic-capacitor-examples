@@ -18,9 +18,19 @@ dependencies {
     implementation project(':capacitor-device')
     implementation project(':capacitor-dialog')
     implementation project(':capacitor-filesystem')
+    implementation project(':capacitor-geolocation')
     implementation project(':capacitor-haptics')
     implementation project(':capacitor-keyboard')
+    implementation project(':capacitor-local-notifications')
+    implementation project(':capacitor-network')
+    implementation project(':capacitor-push-notifications')
+    implementation project(':capacitor-screen-reader')
+    implementation project(':capacitor-share')
+    implementation project(':capacitor-splash-screen')
     implementation project(':capacitor-status-bar')
+    implementation project(':capacitor-storage')
+    implementation project(':capacitor-text-zoom')
+    implementation project(':capacitor-toast')
 
 }
 
