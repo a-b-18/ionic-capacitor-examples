@@ -5,5 +5,9 @@
 </ion-header>
 
 <ion-content>
-
+  <ion-button (click)="testWriteSecretFile()">Test Write Secret</ion-button>
+  <ion-button (click)="testReadSecretFile()">Test Read Secret</ion-button>
+  <ion-button (click)="testDeleteSecretFile()">Test Delete Secret</ion-button>
+  <ion-input [(ngModel)]="this.filePath"></ion-input>
+  <ion-button (click)="testReadFilePath()">Test Read Path</ion-button>
 </ion-content>
