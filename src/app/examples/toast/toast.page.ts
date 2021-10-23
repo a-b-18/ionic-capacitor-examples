@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Toast } from '@capacitor/toast';
 
 @Component({
   selector: 'app-toast',
@@ -11,5 +12,11 @@ export class ToastPage implements OnInit {
 
   ngOnInit() {
   }
+
+  async testToast() {
+    await Toast.show({
+      text: 'Hello!',
+    });
+  };
 
 }

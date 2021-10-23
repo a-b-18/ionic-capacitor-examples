@@ -5,5 +5,8 @@
 </ion-header>
 
 <ion-content>
-  <!-- <ion-button (click)="testStorage()">Test Storage</ion-button> -->
+  <ion-button (click)="testSetName()">testSetName</ion-button>
+  <ion-input aria-label="Name Input" type="text" [(ngModel)]="this.testName"></ion-input>
+  <ion-button (click)="testCheckName()">testCheckName</ion-button>
+  <ion-button (click)="testRemoveName()">testRemoveName</ion-button>
 </ion-content>
